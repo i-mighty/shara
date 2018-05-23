@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.mvc.View?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<View fx:id="login" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../styles/register.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.shara.views.LoginPresenter">
+   <top>
+      <Label text="%app.name" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Lato Light" size="42.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <BorderPane styleClass="center" BorderPane.alignment="CENTER">
+         <center>
+            <VBox fx:id="form" alignment="TOP_CENTER" maxWidth="480.0" spacing="20.0" styleClass="vbox">
+               <children>
+                  <Label text="%sign.in">
+                     <font>
+                        <Font name="Lato Thin" size="30.0" />
+                     </font>
+                  </Label>
+                  <TextField id="email" focusTraversable="false" promptText="%email" />
+                  <PasswordField id="password" focusTraversable="false" promptText="%pass" />
+                  <Button mnemonicParsing="false" onAction="#loginAction" text="%login">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="rbtn" />
+                     </styleClass>
+                  </Button>
+                  <Button mnemonicParsing="false" text="%out.auth.prompt">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="ext" />
+                     </styleClass>
+                  </Button>
+                  <Label text="%new.prompt" textFill="#bbebdb" />
+                  <Button mnemonicParsing="false" onAction="#showRegister" text="%register">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="lbtn" />
+                     </styleClass>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="25.0" left="25.0" right="25.0" top="10.0" />
+               </padding>
+            </VBox>
+         </center>
+         <top>
+            <Separator opacity="0.4" prefWidth="200.0" styleClass="seperator" visible="false" BorderPane.alignment="CENTER" />
+         </top>
+      </BorderPane>
+   </center>
+</View>

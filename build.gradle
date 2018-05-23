@@ -1,0 +1,116 @@
+    buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'org.javafxports:jfxmobile-plugin:1.3.10'
+        classpath 'org.junit.platform:junit-platform-gradle-plugin:1.0.0-RC3'
+    }
+}
+
+ext.junit4Version        = '4.12'
+ext.junitVintageVersion  = '4.12.0'
+ext.junitPlatformVersion = '1.0.0'
+ext.junitJupiterVersion  = '5.0.0'
+ext.log4jVersion         = '2.6.2'
+    
+apply plugin: 'org.javafxports.jfxmobile'
+apply plugin: 'org.junit.platform.gradle.plugin'
+
+junitPlatform {
+    // platformVersion '1.0.0'
+    filters {
+        engines {
+            // include 'junit-jupiter', 'junit-vintage'
+            // exclude 'custom-engine'
+        }
+        tags {
+            // include 'fast'
+            exclude 'slow'
+        }
+        // includeClassNamePattern '.*Test'
+    }
+    // enableStandardTestTask true
+    // reportsDir file('build/test-results/junit-platform') // this is the default
+    logManager 'org.apache.logging.log4j.jul.LogManager'
+}    
+    
+repositories {
+    jcenter()
+    mavenCentral()  
+    maven {
+        url 'http://nexus.gluonhq.com/nexus/content/repositories/releases'
+    }
+}
+
+mainClassName = 'com.shara.Shara'
+
+dependencies {
+    compile 'com.gluonhq:charm:5.0.0'
+    compile 'com.gluonhq:glisten-afterburner:1.4.0'
+    compile group: 'com.mashape.unirest', name: 'unirest-java', version: '1.4.9'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.4'
+    
+    // JUnit Jupiter API and TestEngine implementation
+    testCompile("org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}")
+    testRuntime("org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}")
+ 
+    // If you also want to support JUnit 3 and JUnit 4 tests
+    testCompile("junit:junit:${junit4Version}")
+    testRuntime("org.junit.vintage:junit-vintage-engine:${junitVintageVersion}")
+    
+    testRuntime("org.apache.logging.log4j:log4j-core:${log4jVersion}")
+    testRuntime("org.apache.logging.log4j:log4j-jul:${log4jVersion}")
+    //common-io
+//    testCompile group: 'commons-io', name: 'commons-io', version: '2.4.0'
+    //FontAwesome support
+    compile 'org.controlsfx:controlsfx:8.40.13'
+    compile 'de.jensd:fontawesomefx-commons:8.15'
+    compile 'de.jensd:fontawesomefx-fontawesome:4.7.0-5'
+    //Google Map Services
+    compile 'com.google.maps:google-maps-services:0.2.7'
+    compile 'org.slf4j:slf4j-nop:1.7.25'
+    //Map Render
+    compile 'com.lynden:GMapsFX:2.10.0'
+    compile 'com.gluonhq:maps:1.0.2'
+
+}
+
+jfxmobile {
+    downConfig {
+        version = '3.8.0'
+        // Do not edit the line below. Use Gluon Mobile Settings in your project context menu instead
+        plugins 'display', 'lifecycle', 'position', 'settings', 'statusbar', 'storage'
+}
+    android {
+        manifest = 'src/android/AndroidManifest.xml'
+        compileSdkVersion = 25
+        minSdkVersion = 17
+        dependencies {
+            testCompile("org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}")
+        }
+//        packagingOptions {
+//            exclude 'META-INF/DEPENDENCIES.txt'
+//            exclude 'META-INF/LICENSE.txt'
+//            exclude 'META-INF/NOTICE.txt'
+//            exclude 'META-INF/NOTICE'
+//            exclude 'META-INF/LICENSE'
+//            exclude 'META-INF/DEPENDENCIES'
+//            exclude 'META-INF/notice.txt'
+//            exclude 'META-INF/license.txt'
+//            exclude 'META-INF/dependencies.txt'
+//            exclude 'META-INF/LGPL2.1'
+//        }   
+    }
+    ios {
+        infoPList = file('src/ios/Default-Info.plist')
+        forceLinkClasses = [
+                'com.shara.**.*',
+                'com.gluonhq.**.*',
+                'javax.annotations.**.*',
+                'javax.inject.**.*',
+                'javax.json.**.*',
+                'org.glassfish.json.**.*'
+        ]
+    }
+}

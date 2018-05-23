@@ -1,0 +1,35 @@
+.view {
+
+}
+.searchInput{
+    -fx-margin: 0em 2em;
+    transition: 0.5s;
+}
+.button{
+    -fx-font-family: FontAwesome;
+}
+.plain-btn, .plain-btn:hover, .plain-btn:active{
+    -fx-background-color:transparent;
+    -fx-text-fill:#8b227a;
+    -fx-font-size:30px;
+    -fx-font-family: FontAwesome;
+}
+.menu-btn:hover{
+    -fx-text-fill:#dc143c;/*Swatch default color*/
+}
+.menu-header{
+    -fx-background-color:#330099;
+}
+.bottom-nav{
+  -fx-background-color:#eee;
+  -fx-text-fill: #333;
+}
+.top-bar{
+  -fx-background-color: #eee;
+}
+.center-btn > .icon > .icon-text{
+  -fx-font-size:35px;
+}
+.nav-header{
+  -fx-background-image: url('../images/menu_header.jpg');
+}

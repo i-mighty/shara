@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.mvc.View?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<View fx:id="register" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../styles/register.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.shara.views.RegisterPresenter">
+   <top>
+      <Label styleClass="app-name" text="%app.name" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Lato Light" size="42.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <BorderPane styleClass="center" BorderPane.alignment="CENTER">
+         <center>
+            <VBox fx:id="form" alignment="TOP_CENTER" spacing="20.0" styleClass="vbox">
+               <children>
+                  <Label text="%sign.up">
+                     <font>
+                        <Font name="Lato Thin" size="30.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="app-name" />
+                        <String fx:value="plus-text" />
+                     </styleClass>
+                  </Label>
+                  <TextField id="first_name" focusTraversable="false" promptText="%first.name" />
+                  <TextField id="last_name" focusTraversable="false" promptText="%last.name" />
+                  <TextField id="email" focusTraversable="false" promptText="%email" />
+                  <TextField id="state" focusTraversable="false" promptText="%state" />
+                  <TextField id="city" focusTraversable="false" promptText="%city" />
+                  <PasswordField id="password" focusTraversable="false" promptText="%pass" />
+                  <PasswordField id="confirm_passwword" focusTraversable="false" promptText="%con.pass" />
+                  <Button mnemonicParsing="false" onAction="#registerAction" text="%register">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="rbtn" />
+                     </styleClass>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#authExternal" text="%out.auth.prompt">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="ext" />
+                     </styleClass>
+                  </Button>
+                  <Label styleClass="plus-text" text="%old.prompt" textFill="#bbebdb" />
+                  <Button mnemonicParsing="false" onAction="#showLogin" text="%login">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="lbtn" />
+                     </styleClass>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="25.0" left="25.0" right="25.0" top="10.0" />
+               </padding>
+            </VBox>
+         </center>
+         <top>
+            <Separator opacity="0.4" prefWidth="200.0" styleClass="seperator" BorderPane.alignment="CENTER" />
+         </top>
+      </BorderPane>
+   </center>
+</View>

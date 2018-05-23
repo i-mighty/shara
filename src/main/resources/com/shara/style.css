@@ -1,0 +1,18 @@
+.root {
+
+}
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../../../fontawesome-webfont.ttf');
+}
+@font-face {
+    font-family: 'Lemonada';
+    src: url('../../../Lemonada.ttf');
+}
+@font-face {
+    font-family: 'Aguafina';
+    src: url('../../../banner_font.ttf');
+}
+.auth > .app-name{
+    -fx-text-fill: #DDD;
+}

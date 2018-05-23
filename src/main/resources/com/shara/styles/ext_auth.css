@@ -1,0 +1,34 @@
+.view{
+    -fx-background-color: skyblue;
+}
+.grid-pane{
+    -fx-max-width: 480px;
+    -fx-max-height: 480px;
+}
+.center-btn{
+    -fx-background-color:transparent;
+    -fx-border-width: 1px;
+    -fx-border-radius: 200px;
+    -fx-font-size: 75px;
+    -fx-text-fill:skyblue;
+}
+.center-btn:hover{
+    -fx-background-color:transparent;
+    -fx-font-size:77px;
+    -fx-font-family: Madison;
+}
+.tw{
+    -fx-fill: #df03ee;
+}
+.fb{
+    -fx-fill: royalblue;
+}
+.in{
+    
+}
+.gp{
+    -fx-fill: red;
+}
+.service-name{
+    -fx-font-size:20px;
+}

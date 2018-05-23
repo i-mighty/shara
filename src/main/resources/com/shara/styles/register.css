@@ -1,0 +1,83 @@
+.view{
+  /* -fx-background-color: grey; */
+  -fx-background-color:linear-gradient(from 50% 0% to 50% 75% , #6495ed, #ff8c00);
+  -fx-background-color:linear-gradient(from 25% -30% to 75% 75% , #6495ed 29% , #ff8c00);
+}
+.center{
+
+}
+.scroll-pane{-fx-background-color:#666;}
+.vbox{
+    /* -fx-background-image: url('../images/idia.jpg');
+    -fx-background-repeat:no-repeat;
+    -fx-background-size:auto;
+    -fx-background-position:center; */
+
+    -fx-border-width: 0px;
+    -fx-border-color:black;
+}
+.charm-text-field > .text-field, .text-field{
+    -fx-border-width: 1px;
+    -fx-min-height: 35px;
+    -fx-max-height: 60px;
+    -fx-border-color: #555;
+    -fx-text-fill:#FFF;
+    -fx-border-radius: 0.5em;
+    -fx-color: #555;
+    -fx-font-family: Lato;
+    -fx-alignment: center;
+    -fx-font-size:16px;
+}
+.text-field > .text{
+  -fx-alignment:center;
+}
+.text-field:focus{
+    -fx-border-width: 1px,1px,1px,1px;
+    -fx-min-height: 35px;
+    -fx-max-height: 60px;
+    -fx-border-color: skyblue;
+    -fx-border-radius: 0.5em;
+    -fx-color: white;
+    -fx-alignment: center;
+    -fx-text-fill:#FFF;
+}
+.btn{
+  -fx-background-color: transparent;
+  -fx-border-width: 1px;
+  -fx-border-color: #555;
+  -fx-min-height: 35px;
+  -fx-max-height: 60px;
+  -fx-min-width:180px;
+  -fx-max-width:470px;
+  -fx-border-radius: 0.5em;
+  -fx-alignment: center;
+  -fx-text-fill: #DDD;
+  -fx-font-size:16px;
+  -fx-pref-width: 270px;
+}
+.btn > text{
+    -fx-smooth:false;
+}
+.btn:hover{
+  -fx-background-color: transparent;
+}
+.rbtn:hover{
+  -fx-text-fill: orange;
+}
+.lbtn:hover{
+  -fx-text-fill: #8b227a;
+}
+.ext:hover{
+  -fx-text-fill: #99cc99;
+}
+.seperator{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-fill: transparent;
+}
+.app-name{
+  -fx-text-fill:#eee;
+}
+.plus-text{
+  -fx-text-fill:#eee;
+}

@@ -1,0 +1,14 @@
+.view {
+
+}
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome-webfont.ttf');
+}
+@font-face {
+    font-family: 'Lemonada';
+    src: url('../fonts/Lemonada.ttf');
+}
+.nav-header{
+    -fx-background-image: url('../images/menu_header,jpg');
+}

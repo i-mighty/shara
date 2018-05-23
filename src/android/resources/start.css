@@ -1,0 +1,10 @@
+.view {
+
+}
+.searchInput{
+    -fx-margin: 0em 2em;
+    transition: 0.5s;
+}
+.button{
+    -fx-font-family: FontAwesome;
+}

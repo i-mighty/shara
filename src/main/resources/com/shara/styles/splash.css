@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../../../fontawesome-webfont.ttf');
+}
+.splash-view{
+    -fx-background-image: url('../images/splash.jpg');
+}
+.app-name{
+  -fx-font-size: 100px;
+  -fx-font-family: Madison;
+  -fx-text-fill: #fff;
+}
+.loading-text{
+  -fx-text-fill:white;
+}

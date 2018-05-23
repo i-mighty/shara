@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../../../fontawesome-webfont.ttf');
+}
+.view{
+    -fx-background: #332187;
+}
+

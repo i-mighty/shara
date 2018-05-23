@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.mvc.SplashView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<SplashView fx:id="splash" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../styles/splash.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.shara.views.SplashPresenter">
+   <bottom>
+      <Label fx:id="loadingText" styleClass="loading-text" text="Shara" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Lato Regular" size="13.0" />
+         </font>
+         <padding>
+            <Insets bottom="10.0" top="1.0" />
+         </padding></Label>
+   </bottom>
+   <center>
+      <Label fx:id="appName" styleClass="app-name" text="Shara" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="72.0" />
+         </font></Label>
+   </center>
+</SplashView>
